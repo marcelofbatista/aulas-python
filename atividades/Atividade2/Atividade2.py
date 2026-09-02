@@ -8,7 +8,7 @@ Exemplo de retorno: Seu nome é João, você tem 22 anos, Tem plano? False. Voc�
 #RESPOSTA
 nome = input("Insira seu nome: ")
 idade = int(input("Insira sua idade: "))
-possue_plano = input("Tem plano de saúde? (True/False) ").strip().lower() == "true"
+possue_plano = input("Tem plano de saúde? (True/False) ") == "True"
 
 aceito = idade >= 18 and idade <= 65 and possue_plano
 
