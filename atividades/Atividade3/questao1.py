@@ -1,0 +1,11 @@
+"""
+Questão 1: A Divisão da Conta (Calculadora)
+Crie um programa para um restaurante que funciona como uma calculadora de divisão de conta. O sistema deve solicitar ao usuário o valor total da conta (ex: 150.00) e a quantidade de pessoas na mesa. O programa deve calcular o valor que cada um deve pagar e exibir a mensagem: "O valor total foi de R$ [Total], e cada pessoa deve pagar R$ [Valor Dividido]".
+
+"""
+total = input("Insira o valor da conta: ")
+pessoas = input("Insira o número de pessoas: ")
+valor_dividido = round(float(total) / float(pessoas),2)
+
+print("O valor total foi de R$", total, "e cada pessoa deve pagar R$", valor_dividido)
+#print("O valor total foi de R$", total, f"e cada pessoa deve pagar R$ {valor_dividido:.3}")

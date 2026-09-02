@@ -1,0 +1,45 @@
+Atividade Prática: Operadores, Lógica e Sistemas Básicos
+Objetivo: Usando os conceitos de variáveis, tipos de dados (casting), input() e print(), aplicar os operadores aritméticos, de comparação e lógicos (and, or) para construir pequenos algoritmos e sistemas que resolvem problemas do cotidiano.
+Questões:
+Questão 1: A Divisão da Conta (Calculadora)
+Crie um programa para um restaurante que funciona como uma calculadora de divisão de conta. O sistema deve solicitar ao usuário o valor total da conta (ex: 150.00) e a quantidade de pessoas na mesa. O programa deve calcular o valor que cada um deve pagar e exibir a mensagem: "O valor total foi de R$ [Total], e cada pessoa deve pagar R$ [Valor Dividido]".
+Questão 2: A Fábrica de Caixas (Operador de Módulo)
+Uma fábrica empacota maçãs em caixas que cabem exatamente 12 unidades. Crie um programa que pergunte ao usuário a quantidade total de maçãs colhidas no dia. Utilizando o operador de módulo (%), calcule e exiba na tela quantas maçãs sobrarão fora das caixas (ou seja, o resto da divisão por 12).
+Questão 3: A Catraca do Parque (Operadores de Comparação)
+Para entrar na montanha-russa, a criança precisa ter no mínimo 1.40m de altura. Crie um formulário que pergunte a altura da criança em metros (ex: 1.35). O programa deve verificar se a altura é maior ou igual a 1.40 e imprimir o resultado da comparação na tela (True se puder entrar, False se não puder).
+Questão 4: O Boletim Escolar Automático (Aritmética + Lógica AND)
+Construa um sistema escolar que leia a Nota 1 e a Nota 2 de um aluno, além da sua Porcentagem de Frequência. O programa deve primeiro calcular a média das notas. Para o aluno ser aprovado, ele precisa de duas coisas ao mesmo tempo: uma média maior ou igual a 6.0 E uma frequência maior ou igual a 75. Exiba a média calculada e, em seguida, exiba True se ele foi aprovado ou False se reprovou, usando o operador and.
+Questão 5: O Sistema de Desconto (Lógica OR)
+Uma loja está em promoção: o cliente ganha frete grátis se o valor da compra for maior que R$ 200.00 OU se ele possuir o cartão VIP da loja. Peça ao usuário o valor da compra e pergunte se ele é VIP (peça para digitar 1 para "Sim, sou VIP" ou 0 para "Não sou VIP"). Crie a lógica usando o operador or e imprima True se ele tem direito ao frete grátis ou False caso não tenha.
+Questão 6: O Erro de Verificação (Análise e Correção de Código)
+Um programador iniciante tentou criar um validador de senhas e escreveu o seguinte código:
+senha_cadastrada = 1234
+senha_digitada = input("Digite sua senha: ")
+acesso_liberado = senha_cadastrada == senha_digitada
+print("Acesso liberado?", acesso_liberado)
+
+
+Mesmo que o usuário digite os números 1234 no teclado, o programa sempre responde False. Explique tecnicamente por que isso acontece (lembre-se dos tipos de dados estudados em sala) e reescreva o código corrigindo o erro como comentário no seu próprio código (no arquivo .py).
+Questão 7: O Formulário de Doação de Sangue (Múltiplas Condições)
+Crie um pequeno formulário para um hospital. O programa deve perguntar a idade e o peso do doador. As regras para doar sangue são: ter idade maior ou igual a 16 anos, ter idade menor ou igual a 69 anos E pesar mais que 50kg. Escreva a lógica que verifica se o doador atende a todas essas condições e exiba na tela o resultado (True ou False).
+Questão 8: A Calculadora de Lucro da Empresa
+Construa um programa para um comerciante. O sistema deve receber três dados: o nome do produto, o custo de fábrica para comprá-lo e o preço pelo qual ele será vendido na loja.
+Calcule o lucro em reais (Preço de Venda - Custo).
+Verifique se o lucro é maior que 20 reais.
+Exiba uma mensagem final mostrando: o nome do produto, o lucro obtido e o resultado da verificação (se o lucro foi bom = True ou False).
+
+
+
+
+
+
+
+
+Entregáveis (O que você deve enviar):
+Para comprovar que você dominou a criação e a manipulação da lógica de programação em Python, envie:
+Item
+Descrição da Entrega
+Link do Repositório
+Envie apenas o link do seu repositório contendo o(s) arquivo(s) .py com a resolução de todas as questões. Adicione as respostas teóricas (como a da Questão 6) como comentários (usando #) diretamente no seu código. Não é necessário enviar nenhum documento PDF ou Word extra.
+
+
