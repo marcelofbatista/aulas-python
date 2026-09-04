@@ -1,0 +1,32 @@
+Atividade Prática: Estruturas Condicionais (if e else)
+Objetivo: Aplicar o controle de fluxo no Python utilizando as instruções if e else, integrando operadores de comparação e lógicos (and, or) para criar tomada de decisões em código.
+Questões:
+Questão 1: O Verificador de Par ou Ímpar
+Crie um programa que peça ao usuário para digitar um número inteiro. O sistema deve verificar se o número é par ou ímpar utilizando o operador de resto da divisão (%). Se o resto da divisão por 2 for igual a zero, exiba na tela: "O número X é PAR". Caso contrário (else), exiba: "O número X é ÍMPAR".
+Questão 2: O Radar de Velocidade
+Construa um sistema para um radar de trânsito. O programa deve solicitar a velocidade atual de um carro em km/h. A velocidade máxima permitida na via é de 80 km/h. Se o motorista estiver acima de 80 km/h, o programa deve exibir: "Você foi multado por excesso de velocidade!". Caso contrário, exiba: "Velocidade dentro do limite permitido. Boa viagem!".
+Questão 3: O Validador de Idade para Votação
+Crie um programa que pergunte a idade do usuário. No Brasil, o voto é obrigatório para quem tem 18 anos ou mais. Escreva uma estrutura condicional onde, se a idade for maior ou igual a 18, o terminal imprima: "Você é obrigado a votar". Caso contrário, imprima: "Você ainda não é obrigado a votar".
+Questão 4: O Teste do Saldo Bancário
+Desenvolva um algoritmo que simule um saque bancário. O programa deve receber o saldo atual do cliente (ex: 500.00) e o valor que ele deseja sacar. Se o valor do saque for menor ou igual ao saldo disponível, o programa deve subtrair o valor sacado, atualizar o saldo e exibir: "Saque realizado com sucesso! Saldo atual: R$ [Novo Saldo]". Caso o saque seja maior que o saldo, exiba: "Saldo insuficiente para realizar esta operação".
+Questão 5: A Catraca VIP de Eventos (Uso de AND e OR no if)
+Uma festa exclusiva possui regras específicas para a entrada de convidados. Para ter o acesso liberado, a pessoa precisa atender a uma das seguintes combinações de condições:
+Ter idade maior ou igual a 18 anos E possuir o convite VIP;
+OU ser um dos organizadores do evento (independente da idade).
+Crie um formulário no Python que solicite:
+A idade da pessoa (inteiro);
+Se ela possui convite VIP (digitar 1 para Sim, 0 para Não);
+Se ela é organizadora do evento (digitar 1 para Sim, 0 para Não).
+Escreva uma única estrutura if combinando os operadores and e or para validar a regra. Se a condição for verdadeira, exiba: "Entrada PERMITIDA! Seja bem-vindo(a)". Caso contrário (else), exiba: "Entrada NEGADA! Você não atende aos requisitos".
+
+
+Entregáveis (O que você deve enviar):
+Para comprovar que você dominou a criação e a manipulação da lógica de programação em Python, envie:
+Item
+Descrição da Entrega
+Link do Repositório
+Envie apenas o link do seu repositório com a pasta atividade4 contendo o(s) arquivo(s) .py.
+
+
+
+
