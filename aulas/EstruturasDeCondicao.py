@@ -63,7 +63,6 @@ match dia:
     case "segunda"
         print("Dia de semana")
 
-"""
 dia = input('Digite o dia da semana: ')
 match dia:
     case "sábado" | "domingo":
@@ -72,3 +71,15 @@ match dia:
         print("Dia de semana")
     case _:
         print("Resposta errada")
+
+"""
+idade = 10
+match idade:
+    case n if n < 10:
+        print("Você tem menos de 10 anos.")
+    case n if (n > 10 and n < 18):
+        print("Você tem mais de 10 anos.")
+    case n if n > 18:
+        print("Você tem mais de 18 anos.")
+    case n if n == 18:
+        print("Você tem 18 anos.")
