@@ -16,7 +16,6 @@ if idade >= 18: #executa se a resposta boleana for True
 else: #executa se a condição do IF for False
     print("Não pode entrar")
 
-"""
 #ELIF
 idade = int(input('Digite sua idade: '))
 
@@ -35,3 +34,41 @@ if nome == "":
     print("Por favor, digite um nome válido.")
 else:
     print("Olá "+ nome +"! Seja bem vindo a nossa balada")
+
+
+switch case (escolha caso)
+match case no python
+switch case é usado para várias respostas
+para duas respostas (boleanos) usa o if + else
+
+print("1 + 1 é igual a: \na)1 \nb)2 \nc)3 \nd)4")
+primeira_resposta = input('Digite sua primeira resposta: ')
+match primeira_resposta: #espera um string
+    case "a":
+        print("Resposta errada")
+    case "b":
+        print("Resposta correta")
+    case "c":
+        print("Resposta errada")
+    case "d":
+        print("Resposta errada")
+    case _: #significa valor default, ou seja, valor padrão
+        print("Resposta inválida")
+
+
+#VÁRIAS OPÇÕES EM UM CASE
+match dia:
+    case "sabado"
+        print("Final de semana")
+    case "segunda"
+        print("Dia de semana")
+
+"""
+dia = input('Digite o dia da semana: ')
+match dia:
+    case "sábado" | "domingo":
+        print("Final de semana")
+    case "segunda" | "terça" | "quarta" | "quinta" | "sexta":
+        print("Dia de semana")
+    case _:
+        print("Resposta errada")
