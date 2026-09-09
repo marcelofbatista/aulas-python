@@ -5,8 +5,9 @@ que o usuário digite o número 0 (zero). Quando o usuário digitar 0, o laço d
 soma de todos os números que foram digitados até aquele momento.
 
 """
-numero = int(input("Digite o número correto: "))
+soma = 0
+numero = int(input("Digite o número (0 para encerrar): "))
 while numero != 0:
-    int(input("Número errado. Tente novamente: "))
-    numero += numero
-print(numero)
+    soma += numero
+    numero = int(input("Digite o número (0 para encerrar): "))
+print(soma)
