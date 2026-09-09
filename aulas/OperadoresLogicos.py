@@ -20,6 +20,13 @@
     or -> se ao menos uma das comparações forem True, retorna True
     not
 
+    #OPERADORES DE ATRIBUIÇÃO
+    =  ->atribuir um valor à variável
+    += -> atribuir um valor X NUMÉRICO à variável (incremento)
+    -= -> subtrair um valor X NUMÉRICO à variável (decremento)
+    *= -> multiplicar um valor X pelo NÚMERO à variável
+    /= -> dividir um valor X pelo NÚMERO à variável
+
 ATIVIDADE 2
 Crie um algoritmo, que faça um formulário em que o usuário digite seu nome, sua idade e se ele tem plano de saúde (True ou False)
 O eu sistema deve retornar em um único print(), todas as informações, e se  ele for menor de idade ou idoso ou se não tiver plano de saúde, que ele não será aceito no nosso formulário;

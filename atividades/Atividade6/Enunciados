@@ -1,0 +1,47 @@
+Lista de Exercícios: Estrutura de Repetição While (Enquanto)
+Instruções: Resolva as questões abaixo utilizando a estrutura de controle while do Python.
+
+Questão 1: Contagem Regressiva
+Crie um programa que exiba uma contagem regressiva para o lançamento de um foguete. O programa deve definir uma variável iniciando em 10 e, usando o while, exibir os números de 10 até 1. Ao final, quando o laço terminar, exiba a mensagem: "Foguete lançado!".
+
+Questão 2: Validação de Senha
+Escreva um programa que defina uma senha fixa no código (por exemplo, "123456"). Peça para o usuário digitar a senha. Enquanto a senha digitada não for igual à senha correta, exiba a mensagem: "Senha incorreta. Tente novamente." e peça a senha de novo (igual ao exemplo do "Joao" visto em aula). Quando o usuário acertar, exiba: "Acesso permitido!".
+
+Questão 3: Somador de Números
+Faça um programa que peça ao usuário para digitar números inteiros repetidamente. O programa deve continuar pedindo números até que o usuário digite o número 0 (zero). Quando o usuário digitar 0, o laço deve ser encerrado e o programa deve exibir a soma de todos os números que foram digitados até aquele momento.
+
+Questão 4: Menu Interativo
+Crie um programa que mostre repetidamente um menu com duas opções:
+1 - Mostrar saudação
+2 - Sair do programa
+O programa deve pedir para o usuário escolher uma opção. Usando while:
+Se ele digitar 1, exiba "Olá, seja muito bem-vindo(a)!".
+Se ele digitar qualquer número diferente de 1 e 2, exiba "Opção inválida!".
+O programa só deve parar de repetir e encerrar quando o usuário digitar 2, exibindo a mensagem "Programa encerrado."
+
+Questão 5: Tabuada Simples
+Crie um programa que peça ao usuário um número inteiro para o qual ele deseja ver a tabuada. Utilizando uma variável de incremento (como visto no exemplo da idade), crie um laço while que vá de 1 até 10, exibindo o resultado da multiplicação do número escolhido pelo contador.
+Exemplo de saída esperada se o usuário digitar 5:
+5 x 1 = 5
+5 x 2 = 10
+... (até 10)
+Questão 6: Jogo da Adivinhação com Tentativas
+Crie um programa onde o computador "pensa" em um número secreto (você pode definir um número fixo diretamente no código, por exemplo, numero_secreto = 14). O usuário deve tentar adivinhar qual é esse número. Usando a estrutura while, o programa deve continuar pedindo um novo palpite enquanto o usuário não acertar.
+Requisito extra: Crie uma variável para contar quantas tentativas o usuário fez. Quando ele finalmente acertar o número, exiba a mensagem: "Parabéns! Você acertou o número secreto em [X] tentativas!" (onde X é o número de vezes que ele tentou).
+Questão 7: Controle de Orçamento
+Imagine que você tem um orçamento total para uma viagem, por exemplo, R$ 500. Escreva um programa que defina esse valor em uma variável e peça ao usuário para digitar o valor de cada gasto que ele realizar.
+Usando um laço while, o programa deve subtrair cada gasto do orçamento total e exibir o saldo restante. O laço deve continuar pedindo novos gastos enquanto o orçamento for maior que zero.
+Se o usuário gastar todo o dinheiro (ou seja, o orçamento chegar a zero ou ficar negativo), o programa deve encerrar o laço e exibir a mensagem: "Atenção: Você ficou sem saldo ou estourou seu orçamento!"
+
+
+
+
+Entregáveis (O que você deve enviar):
+Para comprovar que você dominou a criação e a manipulação da lógica de programação em Python, envie:
+
+Item
+Descrição da Entrega
+Link do Repositório
+Envie apenas o link do seu repositório na aba da pasta atividade6 contendo o(s) arquivo(s) .py com a resolução de todas as questões.
+
+
