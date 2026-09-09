@@ -8,3 +8,10 @@ Se o usuário gastar todo o dinheiro (ou seja, o orçamento chegar a zero ou fic
 a mensagem: "Atenção: Você ficou sem saldo ou estourou seu orçamento!"
 
 """
+orcamento = 500
+gasto = float(input("Digite o valor do gasto: R$ "))
+while gasto < orcamento:
+    gasto += gasto
+    print(f"Seu saldo atual é de {orcamento-gasto} reais!")
+    gasto = float(input("Digite o valor do gasto: R$ "))
+print("Atenção: Você ficou sem saldo ou estourou seu orçamento!")
