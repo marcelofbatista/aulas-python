@@ -216,27 +216,24 @@ from operator import index
 
 
 
-funcionarios = ["Funcionario1", "Funcionario2", "Funcionario3"]
-aumento = [funcionarios[0], funcionarios[1], funcionarios[2]]
-demitido = [funcionarios[0], funcionarios[1], funcionarios[2]]
+funcionarios = []
+
 
 while True:
     funcionarios.append(input("Digite o nome do funcionário: "))
-
-    opcao = input("Deseja continuar? [S/N]: ")  # finalizar adição
-    if opcao == "N":
+    opcao = input("Deseja continuar? [S/N]: ")
+    if opcao.strip().upper() == "N":
         break
 
-for turma in turma_python:
-    for index in turma:
-        if index in alunos:
-            if index == alunos[0]:
-                print(f"O aluno {index}")
-        if index in notas:
-            if index == notas[0]:
-                print(f"Tirou exatamente {index} de nota final")
-        if index in faltas:
-            if index == faltas[0]:
-                print(f"E teve {index} de falta final")
+aumento = []
+demitido = []
+
+for funcionario in funcionarios:
+    if funcionario == funcionarios[0] or funcionario == funcionarios[2]:
+        aumento.append(funcionario)
+    else:
+        demitido.append(funcionario)
+print("Recebem aumento: ", aumento)
+print("Serão demitidos: ", demitido)
 
 
