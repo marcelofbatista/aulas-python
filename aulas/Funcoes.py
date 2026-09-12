@@ -31,5 +31,6 @@ def potencia():
     numero2 = int(input("Insira um numero 2: "))
     return print(numero1 ** numero2)
 
-def olaUsuario(nome):
+def olaUsuario(nome, idade):
     print(f"Olá {nome}")
+    print(f"Sua idade {idade}")
