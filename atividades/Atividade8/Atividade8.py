@@ -10,7 +10,11 @@ OBS: valor da média = 7
 """
 
 def aluno(nome, nota1, nota2, nota3, nota4):
-
+    nome = input("Digite o nome do aluno: ")
+    nota1 = float(input("Digite a primeira nota: "))
+    nota2 = float(input("Digite a segunda nota: "))
+    nota3 = float(input("Digite a terceira nota: "))
+    nota4 = float(input("Digite a quarta nota: "))
     media = (nota1 + nota2 + nota3 + nota4) / 4
     if media >= 7:
         print("O aluno foi aprovado!")
@@ -18,10 +22,5 @@ def aluno(nome, nota1, nota2, nota3, nota4):
         print("O aluno foi reprovado!")
     return
 
-   nome = input("Digite o nome do aluno: ")
-    nota1 = float(input("Digite a primeira nota: "))
-    nota2 = float(input("Digite a segunda nota: "))
-    nota3 = float(input("Digite a terceira nota: "))
-    nota4 = float(input("Digite a quarta nota: "))
 
 aluno(nome, nota1, nota2, nota3, nota4)
