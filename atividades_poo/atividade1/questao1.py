@@ -20,9 +20,18 @@ class Pessoa:
         self.curso = curso
         self.turno = turno
 
+    def __str__(self):
+        return f"Nome: {self.nome}\nIdade: {self.idade}\nSexo: {self.sexo}\nCurso: {self.curso}\nTurno: {self.turno}\n"
+
 
 pessoa1 = Pessoa("João", 18, "Masculino", "Python", "Noturno")
 pessoa2 = Pessoa("Tião", 30, "Masculino", "Java", "Vespertino")
 pessoa3 = Pessoa("Maria", 42, "Feminino", "C++", "Matutino")
 pessoa4 = Pessoa("Carlos", 54, "Masculino", "Fortran", "Noturno")
 pessoa5 = Pessoa("Clara", 16, "Feminino", "Redes Sociais", "Vespertino")
+
+
+todasPessoas = [pessoa1, pessoa2, pessoa3, pessoa4, pessoa5]
+
+for pessoa in todasPessoas:
+    print(pessoa)
