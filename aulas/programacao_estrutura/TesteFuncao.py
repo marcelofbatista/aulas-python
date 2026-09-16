@@ -1,7 +1,6 @@
 #ARQUIVO TesteFuncao.py
-import random
 
-from aulas.Funcoes import soma, subtracao, olaUsuario #hierarquia
+from aulas.programacao_estrutura.Funcoes import olaUsuario #hierarquia
 
 nome = input('Digite seu nome: ')
 olaUsuario(nome)
