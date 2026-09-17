@@ -21,8 +21,10 @@ class Pessoa:
         self.turno = turno
 
     def __str__(self):
-        return f"Nome: {self.nome}\nIdade: {self.idade}\nSexo: {self.sexo}\nCurso: {self.curso}\nTurno: {self.turno}\n"
+        return f"Nome: {self.nome}\n\tIdade: {self.idade}\n\tSexo: {self.sexo}\n\tCurso: {self.curso}\n\tTurno: {self.turno}\n"
 
+    def frequente(self):
+        print (f"O aluno {self.nome} está frequente.")
 
 pessoa1 = Pessoa("João", 18, "Masculino", "Python", "Noturno")
 pessoa2 = Pessoa("Tião", 30, "Masculino", "Java", "Vespertino")
@@ -35,3 +37,6 @@ todasPessoas = [pessoa1, pessoa2, pessoa3, pessoa4, pessoa5]
 
 for pessoa in todasPessoas:
     print(pessoa)
+
+frequentePessoas = pessoa1.frequente()
+print(frequentePessoas)

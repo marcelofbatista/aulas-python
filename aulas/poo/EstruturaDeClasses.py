@@ -13,7 +13,7 @@ class Aluno:
  #   objeto_aluno = Aluno()
 
        def __init__(self, nome, registro, notas): #metodo Construtor
-        #define a cosntrução de um novo objeto
+        #define a construção de um novo objeto
         #não se cria um objeto sem construtor
         #nome = novo atributo da classe = parâmetro
         self.nome = nome # nome = Aluno.nome_aluno
