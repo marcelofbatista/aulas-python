@@ -43,5 +43,9 @@ meu_produto = Produto("Alicate", 15, 100)
 meu_produto.realizar_venda(50)
 print(meu_produto.exibir_resumo(meu_produto))
 
+meu_produto.__quantidade_estoque = -50
+meu_produto.__preco = -100
+meu_produto.realizar_venda(9999)
+
 
 print(meu_produto.__dict__)
