@@ -1,0 +1,87 @@
+Lista de Exercícios: Encapsulamento e Herança em Python
+Instruções: Resolva a questão abaixo aplicando os conceitos de Encapsulamento (para a proteção dos dados internos dos animais e validações) e Herança (para especialização de espécies e reuso de código) em Python.
+Questão 1: Sistema de Gestão de Zoológico
+Você foi contratado para desenvolver o módulo de controle de animais de um zoológico. Atualmente, o sistema sofre com dados corrompidos porque veterinários e cuidadores conseguem alterar diretamente a idade e o nível de fome dos animais para valores impossíveis (como idade negativa ou fome menor que zero).
+Seu objetivo é refatorar o sistema criando uma classe base Animal e especializando-a nas classes filhas Mamifero e Ave, garantindo o Encapsulamento de todas as variáveis críticas.
+O que você deve usar:
+Classe Pai: Animal
+Classes Filhas: Mamifero e Ave (ambas herdam de Animal)
+Método construtor __init__ e uso da função super().__init__() nas classes filhas.
+Atributos privados (utilizando o prefixo com dois underlines __):
+Na classe Animal: __nome, __idade e __nivel_fome (escala de 0 a 100, onde 0 é sem fome e 100 é faminto).
+Na classe Mamifero: __velocidade_kmh.
+Na classe Ave: __envergadura_asas (em cm).
+Uso de @property e @setter para controle de leitura e escrita dos atributos protegidos.
+Regras de Negócio e Resultados Esperados:
+1. Classe Pai (Animal):
+Properties e Setters:
+nome e idade: Getters para leitura. O setter de idade não pode aceitar valores menores que zero (exibir "Erro: Idade inválida").
+nivel_fome: Getter e Setter. O setter deve garantir que a fome fique estritamente no intervalo de 0 a 100. Se tentar definir abaixo de 0, ajusta para 0; se acima de 100, ajusta para 100.
+alimentar(porcao):
+Regra: Só aceita porções maiores que zero.
+Resultado esperado: Reduz o __nivel_fome no valor da porção (respeitando o limite mínimo 0). Se a porção for negativa ou zero, exibe "Erro: Porção inválida".
+emitir_som():
+Regra: Exibe uma mensagem genérica: "[Nome] faz um som genérico."
+exibir_resumo():
+Regra: Imprime o nome, a idade e o nível de fome atual do animal.
+2. Classe Filha (Mamifero):
+correr():
+Regra: O ato de correr gasta energia e aumenta o nivel_fome em 20 pontos.
+Resultado esperado: Exibe "[Nome] correu a [velocidade] km/h!" e atualiza a fome usando o setter/property do pai.
+emitir_som() (Sobrescrita):
+Regra: Exibe "[Nome] ruge/ruge alto!"
+exibir_resumo() (Sobrescrita):
+Regra: Chama o exibir_resumo() da classe pai via super() e adiciona a velocidade de corrida.
+3. Classe Filha (Ave):
+voar():
+Regra: A ave só pode voar se o nivel_fome for menor ou igual a 80. Se a fome for maior que 80, o voo é bloqueado.
+Resultado esperado: Se puder voar, exibe "[Nome] voou com suas asas de [envergadura]cm!" e aumenta o nível de fome em 15 pontos. Se negado, exibe "Voo negado: [Nome] está faminto demais para voar!".
+emitir_som() (Sobrescrita):
+Regra: Exibe "[Nome] canta um som melodioso!"
+exibir_resumo() (Sobrescrita):
+Regra: Chama o exibir_resumo() da classe pai via super() e adiciona a envergadura das asas.
+
+
+
+
+
+
+Testes Obrigatórios na Atividade:
+No final do seu arquivo, instancie um objeto Mamifero e um objeto Ave e execute o código de teste para comprovar a segurança e a herança:
+
+# Instanciando os animais
+leao = Mamifero(nome="Simba", idade=5, nivel_fome=70, velocidade_kmh=80)
+gaviao = Ave(nome="Sky", idade=2, nivel_fome=75, envergadura_asas=120)
+
+# 1. Tentativa de alteração direta dos atributos privados (Proteção do Encapsulamento)
+leao.__nivel_fome = -999
+leao.__idade = -10
+
+# 2. Testando ações que alteram o estado interno via Herança e Encapsulamento
+leao.correr()          # Fome sobe de 70 para 90
+gaviao.voar()          # Fome sobe de 75 para 90 (Sucesso)
+gaviao.voar()          # Fome está em 90 -> Deve exibir: "Voo negado: Sky está faminto demais para voar!"
+
+# 3. Testando alimentação
+leao.alimentar(50)     # Fome cai de 90 para 40
+leao.alimentar(-10)    # Deve exibir: "Erro: Porção inválida"
+
+# 4. Exibição final dos resumos
+print("\n--- RESUMO DO MAMÍFERO ---")
+leao.emitir_som()
+leao.exibir_resumo()
+
+print("\n--- RESUMO DA AVE ---")
+gaviao.emitir_som()
+gaviao.exibir_resumo()
+
+
+
+Entregáveis (O que você deve enviar):
+Item
+Descrição da Entrega
+
+Link do Repositório
+Envie apenas o link do seu repositório na aba da pasta atividades_poo/atividade3 contendo o arquivo .py com a resolução e execução dos testes obrigatórios.
+
+
