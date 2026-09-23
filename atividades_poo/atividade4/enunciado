@@ -1,0 +1,58 @@
+Lista de Exercícios: Abstração em Python
+Instruções: Resolva a questão abaixo aplicando o conceito de Abstração (uso de classes abstratas e métodos abstratos) em Python. O objetivo é criar um "contrato" obrigatório que padronize o funcionamento de diferentes classes, garantindo que o sistema principal possa operar com qualquer uma delas sem conhecer seus detalhes internos. O uso de Encapsulamento é opcional nesta atividade, mas encorajado.
+Questão 1: Sistema Baseado em Contratos
+Você deve construir um sistema organizado que processe diferentes tipos de ações de forma padronizada. Para isso, você deverá escolher UM dos temas abaixo (ou criar um tema próprio, desde que siga as mesmas regras de herança e abstraçaõ).
+Opções de Temas:
+Tema 1: Sistema de Notificações (Classes filhas: Email, SMS, PushNotification)
+Tema 2: Sistema de Cálculo de Frete (Classes filhas: Caminhao, Navio, Drone)
+Tema 3: Exportação de Relatórios (Classes filhas: RelatorioPDF, RelatorioExcel, RelatorioHTML)
+Tema 4: Escolha Livre (Seja criativo, mas respeite as exigências técnicas abaixo!)
+O que você deve usar:
+Importação obrigatória: from abc import ABC, abstractmethod
+1 Classe Pai Abstrata que herde de ABC.
+No mínimo 2 Classes Filhas que herdem da Classe Pai.
+Pelo menos 1 método abstrato (com o decorador @abstractmethod) na Classe Pai, que será o contrato obrigatório.
+Pelo menos 1 método concreto (comum a todas as filhas) na Classe Pai (ex: um método que imprime um log ou uma mensagem de início de processamento).
+Regras de Negócio (Molde Geral para qualquer tema escolhido):
+1. Classe Pai Abstrata:
+Método Concreto (ex: iniciar_processo() ou registrar_log()): Deve imprimir uma mensagem genérica avisando que a operação foi iniciada pelo sistema central. Esse método já tem corpo (código) e não precisa ser reescrito nas filhas.
+Método Abstrato (ex: executar_acao(), calcular() ou enviar()): Deve possuir os parâmetros necessários para a operação (ex: valor, destino, dados), mas seu corpo deve conter apenas pass.
+2. Classes Filhas:
+Implementação Obrigatória: As classes filhas devem obrigatoriamente sobrescrever o método abstrato da classe pai.
+Regras Específicas de cada Filha: Cada classe filha deve ter um comportamento matemático ou de lógica diferente no método.
+Exemplo se escolheu Frete: O Caminhão cobra R$ 5,00 por Km, enquanto o Drone cobra R$ 20,00 por Km, mas só aceita até 2kg (inclua uma validação com if/else).
+Exemplo se escolheu Notificação: O SMS deve verificar se o número de telefone tem no mínimo 9 dígitos antes de dizer que enviou.
+3. O Sistema (Função Polimórfica Externa):
+Fora das classes, crie uma função chamada processar_lote(lista_de_objetos).
+Essa função deve receber uma lista contendo várias instâncias das suas classes filhas.
+Usando um loop for, a função deve iterar sobre a lista, chamando o método concreto (log) e, em seguida, o método abstrato implementado, demonstrando que o sistema confia no contrato definido pela abstração.
+Testes Obrigatórios na Atividade:
+No final do seu arquivo .py, adicione o seguinte roteiro de testes adaptado para o seu tema:
+# 1. Tentativa de instanciar a Classe Abstrata (DEVE GERAR ERRO)
+# Descomente a linha abaixo para testar e provar que o Python bloqueia:
+# objeto_generico = SuaClassePai()
+
+# 2. Instanciando as Classes Filhas
+obj1 = ClasseFilha1()
+obj2 = ClasseFilha2()
+
+# 3. Criando um Lote de Processamento (Lista)
+lote = [obj1, obj2, obj1] # Pode repetir tipos
+
+# 4. Processando em lote (Demonstrando o Polimorfismo e a Abstração)
+print("\n--- INICIANDO PROCESSAMENTO EM LOTE ---")
+for item in lote:
+    item.metodo_concreto_log()
+    # Chama o método que era abstrato, mas agora está implementado
+    item.metodo_abstrato(argumento1, argumento2)
+    print("-" * 30)
+
+
+Entregáveis (O que você deve enviar):
+Item
+Descrição da Entrega
+
+Link do Repositório
+Envie apenas o link do seu repositório na aba da pasta atividades_poo/atividade4 contendo o arquivo .py com a resolução, a escolha do tema explícita em comentário no topo do arquivo e a execução dos testes obrigatórios.
+
+
