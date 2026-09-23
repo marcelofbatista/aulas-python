@@ -7,3 +7,9 @@ class Relatorio(ABC):
 
 class PDF(Relatorio):
     def exportar(self, valor):
+        if valor =
+        print("Exportar para PDF")
+
+exportar_pdf = PDF()
+
+exportar_pdf.exportar(50)
