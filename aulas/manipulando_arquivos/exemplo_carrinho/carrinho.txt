@@ -1,0 +1,6 @@
+RECIBO DO CARRINHO
+
+['arroz', 4.0]Produto: arroz R$4.00
+Produto: feijão R$5.00
+
+Total a pagar: 9.00
