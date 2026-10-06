@@ -16,7 +16,7 @@ loja = {
 }
 
 with open(ARQUIVO, "w", encoding="utf-8") as arquivo:
-    json.dump(loja, arquivo, indent=4, ensure_ascii=False)
+    json.dump(loja, arquivo, indent=1, ensure_ascii=False)
 
 print(f"Estoque inicial salvo em {ARQUIVO}.\n")
 
@@ -51,6 +51,6 @@ for produto in dados_lidos["produtos"]:
 
 # 4. Salvando o dicionário atualizado (sobrescreve o arquivo)
 with open(ARQUIVO, "w", encoding="utf-8") as arquivo:
-    json.dump(dados_lidos, arquivo, indent=4, ensure_ascii=False)
+    json.dump(dados_lidos, arquivo, indent=1, ensure_ascii=False)
 
 print(f"\nEstoque atualizado salvo em {ARQUIVO}.")
