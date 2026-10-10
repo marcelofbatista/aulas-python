@@ -1,5 +1,5 @@
 import json # só pra escrever o arquivo json
-import requests # Módulo EXTERNO -> Faz requisições HTTP
+import requests # Módulo EXTERNO -> Faz requisições HT
 
 cep_digitado = 73040130
 link = f'https://viacep.com.br/ws/{cep_digitado}/json/'
