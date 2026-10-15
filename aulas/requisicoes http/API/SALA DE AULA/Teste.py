@@ -23,12 +23,24 @@ atualizacao = requests.put((link+'/2'), json=meus_atualizado)
 
 #REQUISIÇÃO DELETE
 
-deletar = requests.delete(link+'/2')
+deletar = requests.delete(link+'/3')
 print(f'STATUS DELETE {deletar.text}')
 
-while True:
-    novo_dado = {
-        'nome': 'Teste',
-        'email': email@email.com
-    }
-    
+# ====================================================
+# Fazendo buscas e salvado na minha base de dados
+
+busca_cep = requests.get(link_cep)
+busca_pessoa = requests.get(link+'/1')
+
+lista_de_pessoas = []
+
+lista_de_pessoas.append(busca_pessoa.json())
+lista_de_pessoas.append(busca_cep.json())
+
+print(lista_de_pessoas)
+
+print(f'\n\nNome da pessoa: {lista_de_pessoas[0]['nome']}\n'
+      f'CEP da pessoa: {lista_de_pessoas[1]['cep']}\n')
+
+with open('pessoas.json', 'w', encoding='utf-8') as arquivo:
+    json.dump(lista_de_pessoas, arquivo, indent=4, ensure_ascii=False)
