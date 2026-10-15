@@ -22,21 +22,33 @@ for funcionario in lista_funcionarios:
             print(resposta.status_code)
 
             if resposta.status_code == 200:
-                print(resposta.json(value))
                 dicionario_funcionario = resposta.json()
+
+                if dicionario_funcionario.get("erro") == "true" or dicionario_funcionario.get("erro") is True:
+                    print("CEP inválido ou não encontrado! Tente novamente.\n")
+                    continue
+
+                print(f"Dados encontrados: {dicionario_funcionario}\n")
+
                 for chave, valor in dicionario_funcionario.items():
                     if chave == "localidade":
                         funcionario["cidade"] = valor
-                    if chave == "estado":
+                    if chave == "uf":
                         funcionario["estado"] = valor
                 funcionario["cep"] = cep_digitado
+                print(f"CEP de {funcionario['nome']} atualizado com sucesso!\n")
                 break
+            else:
+                print("Erro na consulta do CEP")
 
 #base de dados atualizada
-
+print("---BASE DE DADOS ATUALIZADA---")
 for funcionario in lista_funcionarios:
     print(funcionario)
 
+#salvar os dados preenchidos em um arquivo json
+with open("dados_funcionarios_atualizados.json", "w", encoding="utf-8") as arquivo:
+    json.dump(lista_funcionarios, arquivo, ensure_ascii=False, indent=4)
 
 
 #inserir dados onde estiver algum dado vazio
@@ -44,11 +56,3 @@ for funcionario in lista_funcionarios:
 #salvar os dados preenchidos em um arquivo json
 # (ex.: dados_funcionarios_atualizados.json
 
-
-"""
-    print(f"Nome: {funcionario['nome']}\n"
-          f"Cargo: {funcionario['cargo']}\n"
-          f"CEP: {funcionario['cep']}\n"
-          f"Cidade: {funcionario['cidade']}\n"
-          f"Estado: {funcionario['estado']}\n")
-"""
