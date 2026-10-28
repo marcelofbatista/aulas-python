@@ -1,10 +1,19 @@
 import pandas as pd
 
 #1. A Base de Dados (CSV)
-df_dados_mercado = pd.read_csv('estoque_supermercado.csv')
+df_mercado = pd.read_csv('estoque_supermercado.csv')
 
 #2. Limpeza da Coluna preco:
-df_dados_mercado.info()
+df_preco_limpo = (df_mercado["preco"]
+                              .str.replace(r"[^\d,.\-]", "", regex=True)
+                              .str.replace(r"\.(?=\d{3}(?:\.|,|$))", "", regex=True)
+                              .str.replace(r",",".", regex=False))
+df_preco_limpo = pd.to_numeric(df_preco_limpo, errors="coerce")
+
+print(df_preco_limpo)
+######Preencha os valores nulos (NaN) com a média de preços da base.
+df_preco_limpo.info()
+
 
 #3. Limpeza da Coluna quantidade:
 
